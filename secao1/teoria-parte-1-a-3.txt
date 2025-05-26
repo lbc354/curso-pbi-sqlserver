@@ -1,0 +1,99 @@
+﻿TEORIA PARTE 1
+
+
+O que é:
+O Power BI é uma ferramenta da Microsoft de análise de negócios que permite que você visualize seus dados de forma mais amigável através da criação de Dashboards.
+
+
+Origem:
+Power Query, do Excel: Permite a obtenção e manipulação de informações a partir de diferentes fontes de dados. Camada de ETL.
+Power Pivot, do Excel: Permite a criação de modelos de dados diretamente no Excel para a transformação dos dados em informações. Camada de DW - Modelagem de Dados.
+Power View, do Excel: Permite a criação de relatórios de dashboards que garantem uma experiência interativa com o usuário. Camada de Relatórios.
+
+
+Microsoft Power Platform:
+Power BI: Business Analytics.
+Power Apps: Application Development.
+Power Automate: Process Automation.
+Power Virtual Agents: Intelligent Virtual Agents.
+
+
+Fluxo:
+Analista BI => capta fontes de dados (base de dados) => converte em dashboards (PBI).
+
+
+Dados x Informação:
+Dados: De maneira geral, é o conteúdo quantificável e que por si só não transmite nenhuma mensagem que possibilite o entendimento sobre determinada situação. Sem dados, não temos informações.
+Informação: é o resultado do processamento dos dados. Ou seja, os dados foram analisados e interpretados sob determinada ótica, e a partir dessa análise se torna possível qualificar os dados.
+
+
+ETL:
+É um conceito de tratamento de dados.
+Extract: Extração de uma fonte de dados (csv, txt, sql, …).
+Transform: Tratamento dos dados (retirar espaços dos campos, remover duplicados, formatar células como valores, retirar linhas alternadas, verificar nomes, …).
+Load: Carregamento dos dados para alguma base de dados (Data Warehouse*).
+
+
+*Data Warehouse:
+Um data warehouse é um sistema de armazenamento de dados centralizado que consolida informações de diversas fontes para fins de análise e tomada de decisões. Diferentemente de um banco de dados transacional, que se concentra em operações online e em tempo real, o data warehouse é otimizado para análises, relatórios e business intelligence.
+
+
+Administração do ETL/Ferramentas de ETL: Oracle, Pentaho, …
+
+
+TEORIA PARTE 2
+
+
+ETL:
+Load (carregamento): Nesse processo, por boas práticas, são criadas grandes tabelas a fim de evitar os JOIN para melhor desempenho.
+
+
+JOIN:
+É a interseção entre duas ou mais tabelas onde as tabelas precisam de colunas em comum com o mesmo tipo de dados.
+
+
+  
+
+
+
+Tabela Fato: Possui registros duplicados.
+Tabela Dimensão: Possui registros únicos.
+A coluna que vai determinar se temos registros duplicados ou não é a coluna que utilizamos para fazer o JOIN com a outra tabela.
+
+
+TEORIA PARTE 3
+
+
+Características dos ambientes OLTP e OLAP:
+OLTP (On-Line Transaction Processing): Sistemas que tratam o negócio; Ênfase nas operações do negócio; Base dos ambientes transacionais; Nível operacional; Gerenciamento de concorrência. (Atualização em tempo real).
+OLAP (On-Line Analytical Processing): Sistemas que analisam o negócio; Base dos ambientes de Data Warehouse; Frequentemente faz uso de dados históricos; Integra dados de diferentes processos; Sistemas de apoio à decisão (DSS); Visão analítica do negócio; Consulto é a principal atividade; Os dados são consistentes e históricos; Analisam-se tendências e padrões a partir de grande quantidade de dados. (Atualização por consulta). Não é permitido fazer atualização de registro, o que deve ser feito é uma carga.
+
+
+OLAP é otimizado para conduzir análises de dados complexas e os sistemas OLAP são projetados para uso por cientistas de dados, analistas de negócios e trabalhadores do conhecimento.
+OLTP é otimizado para processar um grande número de transações e os sistemas OLTP são projetados para uso por trabalhadores da linha de frente, como caixas, caixas de banco, recepcionistas de hotéis, ou para aplicativos de autoatendimento ao cliente.
+
+
+Data Warehouse é um ambiente, não um produto, trata-se da construção arquitetônica de um sistema de informações que fornece a seus usuários informações históricas, de apoio a decisão, cujas quais são de difícil acesso quando utilizadas no modelo transacional.
+
+
+Alguns objetivos do BI: Facilitar o acesso das informações aos usuários; Apoiar a organização com dados para a tomada de decisões; Proporcionar análises visando entender a necessidade dos clientes e da empresa; Definir e acompanhar estratégias para a organização.
+
+
+Implementação de BI em organizações:
+Fase 1: Definição do “BI Project Scope”.
+* Conversa para definição do escopo; entrevista com cliente; pontapé inicial do projeto; identificar requisitos; o que quer ver na dashboard.
+Fase 2: Identificação das fontes de dados.
+* Colher as fontes/bases de dados para utilizar no BI (Excel, Banco, etc).
+Fase 3: Conversão da “Raw Data” em “Right Data”.
+* Trabalha junto com a 4; trata as tabelas (colunas vazias, dados sujos, etc).
+Fase 4: Criação dos mecanismos ETL para alimentar os modelos.
+* Trabalha junto com a 3; faz joins entre tabelas para relacionar dados.
+Fase 5: Modelização e criação das views.
+* Aqui fazemos a montagem das dashboards.
+Fase 6: Estratégia de distribuição e difusão.
+* Entrega as dashboards.
+Fase 7: Avaliação da eficácia dos relatórios/reportings.
+* Teste do usuário. Se precisar consertar, volta para a etapa 2.
+
+
+Exemplos de modelagem: Fato Dimensão ou Star Schema; Snowflake.
