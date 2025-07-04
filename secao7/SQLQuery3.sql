@@ -11,7 +11,7 @@ CREATE TABLE funcionarios(
 
 INSERT INTO funcionarios(nome, sexo, endereco, salario)
 VALUES ('lucas', 'm', 'taguatinga', 2100),
-       ('isabela', 'f', 'taguatinga', 3200);
+       ('leni', 'f', 'taguatinga', 3200);
 
 SELECT *--nome, salario AS [sal. mensal]
 FROM funcionarios

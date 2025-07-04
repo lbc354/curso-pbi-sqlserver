@@ -35,10 +35,10 @@ VALUES (100, 'salgadinho', 's', 1234567890),
 
 INSERT INTO venda(valor, prod, quantidade, vendedor, filial)
 VALUES (10, 'salgadinho', 2, 'lucas', 'df'),
-(5, 'bolinho', 4, 'isabela', 'df');
+(5, 'bolinho', 4, 'leni', 'df');
 
 INSERT INTO clientes(nome, cpf, endereco, cidade, sexo)
-VALUES ('thainah', '12345678900', 'taguatinga', 'brasília', 'f');
+VALUES ('lígia', '12345678900', 'taguatinga', 'brasília', 'f');
 
 SELECT * FROM estoque;
 SELECT * FROM venda;

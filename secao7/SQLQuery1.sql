@@ -40,7 +40,7 @@ drop table funcionarios_old;
 /* insere dados para validar */
 insert into funcionarios (nome, sexo, endereco, salario)
 values ('lucas', 'm', 'taguatinga', 2100),
-('isabela', 'f', 'taguatinga', 3200);
+('leni', 'f', 'taguatinga', 3200);
 
 /* vê dados da tabela */
 select * from funcionarios;
